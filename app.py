@@ -9,19 +9,19 @@ setup_routes(app)
 def home():
     return render_template("index.html")
 
-@app.route("/register-form")
+@app.route("/user/register-form")
 def register_form():
     return render_template("register.html")
 
-@app.route("/login-form")
+@app.route("/user/login-form")
 def login_form():
     return render_template("login.html")
 
-@app.route("/forgot-form")
+@app.route("/user/forgot-form")
 def forgot_form():
     return render_template("forgot_password.html")
 
-@app.route("/reset-form")
+@app.route("/user/reset-form")
 def reset_form():
     return render_template("reset_password.html")
 
