@@ -1,4 +1,5 @@
-from .utils1 import read_users, save_users
+from utils.read_users import read_users
+from utils.save_users import save_users
 
 def reset_password_utils(code,new_password):
 

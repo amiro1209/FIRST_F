@@ -1,4 +1,5 @@
-from .utils1 import read_users,save_users
+from utils.read_users import read_users
+from utils.save_users import save_users
 
 def register_util(name,phone,password):
     if not all([name, phone, password]):
