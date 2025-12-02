@@ -1,10 +1,11 @@
 from flask import Blueprint, request
-from ..utils.register import register_util
-from ..utils.login import login_utils
-from ..utils.forgot_password import forgot_password_utils
-from ..utils.reset_password import reset_password_utils
 
-user_bp = Blueprint("user" ,__name__ ,url_prefix="/user")
+from .register import register_util
+from .login import login_utils
+from .forgot_password import forgot_password_utils
+from .reset_password import reset_password_utils
+
+user_bp = Blueprint("users" ,__name__ ,url_prefix="/user-actions")
 
 @user_bp.route("/register" , methods=["POST"])
 def register():

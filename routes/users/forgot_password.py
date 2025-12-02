@@ -1,5 +1,7 @@
-from .utils1 import read_users, save_users
-import  random
+import random
+
+from utils.read_users import read_users
+from utils.save_users import save_users
 
 def forgot_password_utils(phone):
 
@@ -14,7 +16,7 @@ def forgot_password_utils(phone):
             user["reset_code"] = code
             
             save_users(users)
-            return f"successfull {code} <a href='/user/reset-form'><button>reset password</button></a>"
+            return f"successfull {code} <a href='/reset-form'><button>reset password</button></a>"
         
     return "not exist <a href='/'><button>home</button></a>"
         
